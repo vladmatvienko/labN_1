@@ -3,13 +3,13 @@ public class Main {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.print("Количество: ");
-        int N = in.nextInt();
-        int i = 1;
-        while (N <= 0) {
-            if (N <= 0) {
+        int kolxy = in.nextInt();
+        int counter = 1;
+        while (kolxy <= 0) {
+            if (kolxy <= 0) {
                 System.out.println("Ошибка, введите число больше 0");
                 System.out.print("Количество: ");
-                N = in.nextInt();
+                kolxy = in.nextInt();
             }
         }
         System.out.print("Радиус: ");
@@ -22,7 +22,7 @@ public class Main {
             }
         }
         int kol = 0;
-        while (i <= N) {
+        while (counter <= kolxy) {
             System.out.print("X");
             System.out.print(i);
             System.out.print(": ");
@@ -31,7 +31,7 @@ public class Main {
             System.out.print(i);
             System.out.print(": ");
             int Y = in.nextInt();
-            i = i + 1;
+            counter = counter + 1;
             if (X * X + Y * Y <= R * R) {
                 kol = kol + 1;
             }
