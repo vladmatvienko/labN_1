@@ -5,8 +5,8 @@ public class Main {
         System.out.print("День рождения: ");
         int raznost;
         int day = in.nextInt();
-        while (day > 31| day > 0) {
-            if (day > 31) {
+        while (day > 31 | day < 0) {
+            if (day > 31| day < 0) {
                 System.out.println("Ошибка, введите число меньше 31");
                 System.out.print("День рождения: ");
                 day = in.nextInt();
@@ -14,8 +14,8 @@ public class Main {
         }
         System.out.print("Месяц рождения: ");
         int month = in.nextInt();
-        while (month > 12| month > 0) {
-            if (month > 12) {
+        while (month > 12| month < 0) {
+            if (month > 12| month < 0) {
                 System.out.println("Ошибка, введите число меньше 12");
                 System.out.print("Месяц рождения: ");
                 month = in.nextInt();
@@ -23,8 +23,8 @@ public class Main {
         }
         System.out.print("Год рождения: ");
         int year = in.nextInt();
-        while (year > 2022| year > 0) {
-            if (year > 2022) {
+        while (year > 2022| year < 0) {
+            if (year > 2022| year < 0) {
                 System.out.println("Ошибка, введите число меньше 2022");
                 System.out.print("Год рождения: ");
                 year = in.nextInt();
@@ -37,14 +37,15 @@ public class Main {
             year = toyear - year;
         }
         if (tomonth >= month) {
-            raznost = tomonth - month;
+           raznost  = tomonth - month;
         }else{
             raznost = month - tomonth;
+            if (raznost==0){
+            }else {
+                raznost = 12 - raznost;
+            }
         }
-        if (raznost==0){
-        }else {
-            raznost = 12 - raznost;
-        }
+
         if (today >= day) {
             day = today - day;
         }else{
