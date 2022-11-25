@@ -31,7 +31,7 @@ public class Main {
             }
         }
         int today = 17, tomonth = 11, toyear = 2022;
-        if (today+tomonth*31<=day+month*31) {
+        if (today+tomonth*31<day+month*31) {
             year = toyear - year - 1;
         }else{
             year = toyear - year;
